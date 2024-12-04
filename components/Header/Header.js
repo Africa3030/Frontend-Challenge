@@ -1,3 +1,4 @@
+import React from "react";
 import headerStyles from "./HeaderStyles";
 
 const Header = () => {

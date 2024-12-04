@@ -2,12 +2,14 @@ import css from "styled-jsx/css";
 
 export default css`
   .is-visible {
-    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
 
   @media (min-width: 768px) {
     .is-visible {
-      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
     }
   }
 `;
