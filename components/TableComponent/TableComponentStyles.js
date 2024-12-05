@@ -9,7 +9,6 @@ export default css.global`
 
   .table-component-body {
     width: 100%;
-
   }
 
   .table-component-body .table-component-row {
@@ -51,7 +50,8 @@ export default css.global`
     padding: 0 12px;
   }
 
-  .table-component-text-no-data-content span:not(span.table-component-text-no-data-content-skeleton) {
+  .table-component-text-no-data-content
+    span:not(span.table-component-text-no-data-content-skeleton) {
     color: var(--clr-links);
     cursor: pointer;
     margin-left: 3px;
@@ -94,17 +94,17 @@ export default css.global`
     width: 100%;
   }
 
-  .table-component-header-sticky{
-    position:sticky;
-    top:65px;
+  .table-component-header-sticky {
+    position: sticky;
+    top: 65px;
   }
 
   .table-component-header-section span {
     padding-left: 20px;
     margin: 0px;
     font-family: var(--ff-medium);
-    font-size:20px;
-    line-height:26px;
+    font-size: 20px;
+    line-height: 26px;
     color: var(--clr-txt);
   }
 
@@ -132,8 +132,8 @@ export default css.global`
     background-color: var(--clr-light);
   }
 
-  .table-component-data{
-    position:relative;
+  .table-component-data {
+    position: relative;
   }
 
   .table-component-content .table-container .table-component-data-head {
@@ -145,33 +145,36 @@ export default css.global`
     max-width: 100%;
   }
 
-  .table-component-data-head:hover{
-    cursor:pointer;
+  .table-component-data-head:hover {
+    cursor: pointer;
   }
 
-  .table-component-content .table-container .table-component-data-head:hover{
+  .table-component-content .table-container .table-component-data-head:hover {
     background-color: var(--clr-tableSpanHover);
   }
 
-  .filter-down-active{
-    position:absolute;
-    top:0px;
+  .filter-down-active {
+    position: absolute;
+    top: 0px;
   }
 
-  .filter-up-active{
-    position:absolute;
-    top:-6px;
+  .filter-up-active {
+    position: absolute;
+    top: -6px;
   }
 
-  .left-50{
-    left:50%;
+  .left-50 {
+    left: 50%;
   }
 
-  .pl-20{
-    padding-left:20px;
+  .pl-20 {
+    padding-left: 20px;
   }
 
-  .table-component-content .table-container .table-component-body .table-component-data {
+  .table-component-content
+    .table-container
+    .table-component-body
+    .table-component-data {
     white-space: inherit;
     display: flex;
     justify-content: center;
@@ -206,11 +209,12 @@ export default css.global`
     text-decoration: underline;
   }
 
-  .table-component-header .table-component-data-head{
+  .table-component-header .table-component-data-head {
     border-left: 1px solid var(--clr-tableBorder);
   }
 
-  .table-component-data-head.table-component-column-score img:not(.filter-up-active, .filter-down-active) {
+  .table-component-data-head.table-component-column-score
+    img:not(.filter-up-active, .filter-down-active) {
     margin-left: 4px;
     margin-bottom: 1px;
     width: 11px;
@@ -234,14 +238,14 @@ export default css.global`
     white-space: normal;
     pointer-events: none;
   }
-  
+
   .mobile-tooltip:hover {
-    }
-    
-  .mobile-tooltip:hover  span {
-      display: block !important;
-      visibility: visible !important
-      opacity: 100 !important;
+  }
+
+  .mobile-tooltip:hover span {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 100 !important;
   }
 
   .table-component-content .table-component-data,
@@ -266,12 +270,16 @@ export default css.global`
     font-family: var(--ff-primary);
   }
 
-  .table-component-content .table-component-body .table-component-row:not(:last-child) {
+  .table-component-content
+    .table-component-body
+    .table-component-row:not(:last-child) {
     border-bottom: 0.8px solid var(--clr-border);
   }
 
   @supports (-webkit-touch-callout: none) {
-    .table-component-content .table-component-body .table-component-row:not(:last-child) {
+    .table-component-content
+      .table-component-body
+      .table-component-row:not(:last-child) {
       border-bottom: 1px solid var(--clr-border);
     }
   }
@@ -286,12 +294,15 @@ export default css.global`
 
   .table-component-content
     .table-component-body
-    .table-component-company-colum span:first-child,
-    .table-component-content
+    .table-component-company-colum
+    span:first-child,
+  .table-component-content
     .table-component-body
-    .table-component-company-colum span:first-child a{
-      height: 17px;
-      display: flex;
+    .table-component-company-colum
+    span:first-child
+    a {
+    height: 17px;
+    display: flex;
   }
 
   .table-component-content
@@ -334,7 +345,6 @@ export default css.global`
     width: 230px;
     position: relative;
   }
-
 
   .table-component-column-country-desktop,
   .table-component-column-country-mobile {
@@ -388,13 +398,14 @@ export default css.global`
     width: 74px;
   }
 
-  .table-component-column-gain.tootipCustomStockLlistDoubleSize .tooltiptextCustomStockList {
+  .table-component-column-gain.tootipCustomStockLlistDoubleSize
+    .tooltiptextCustomStockList {
     bottom: 50px;
   }
 
   .table-component-trash .tooltiptextCustomStockList {
     bottom: 50px !important;
-    height:auto;
+    height: auto;
   }
 
   .table-component-data.table-component-column-gain .column-gain-content {
@@ -404,33 +415,34 @@ export default css.global`
     width: 100%;
     height: 100%;
     text-align: center;
-
   }
 
   .table-component-column-industry-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
-    padding:0 4px 0 4px;
+    width: 100%;
+    padding: 0 4px 0 4px;
   }
 
   .table-component-column-industry-content img {
     margin-left: 4px;
   }
 
-  .secIndText{
-    width:100%;
+  .secIndText {
+    width: 100%;
   }
 
-  .etf-region{
-    cursor:pointer;
+  .etf-region {
+    cursor: pointer;
   }
 
   /* / columns sizig */
 
-  .table-component-column-country-desktop img:not(.filter-up-active, .filter-down-active, .is-region),
-  .table-component-column-country-mobile img:not(.filter-up-active, .filter-down-active, .is-region) {
+  .table-component-column-country-desktop
+    img:not(.filter-up-active, .filter-down-active, .is-region),
+  .table-component-column-country-mobile
+    img:not(.filter-up-active, .filter-down-active, .is-region) {
     width: 19px;
     height: 12px;
   }
@@ -474,7 +486,8 @@ export default css.global`
     align-items: center;
   }
 
-  .table-component-content .table-component-data.table-component-column-industry,
+  .table-component-content
+    .table-component-data.table-component-column-industry,
   .table-component-content .table-component-data.table-component-column-sector {
     padding-left: 12px;
     padding-right: 12px;
@@ -511,29 +524,32 @@ export default css.global`
   }
 
   .table-component-portfolio-img-container {
-    margin-right:25px;
+    margin-right: 25px;
   }
 
-  .table-component-portfolio-img-container .table-component-portfolio-img-hover {
+  .table-component-portfolio-img-container
+    .table-component-portfolio-img-hover {
     display: none;
   }
 
   @media (min-width: 770px) {
-    .table-component-portfolio-img-container:hover .table-component-portfolio-img,
-    .table-component-portfolio-img-container .table-component-portfolio-img-hover {
+    .table-component-portfolio-img-container:hover
+      .table-component-portfolio-img,
+    .table-component-portfolio-img-container
+      .table-component-portfolio-img-hover {
       display: none;
     }
 
     .table-component-portfolio-img-container .table-component-portfolio-img,
-    .table-component-portfolio-img-container:hover .table-component-portfolio-img-hover {
+    .table-component-portfolio-img-container:hover
+      .table-component-portfolio-img-hover {
       display: block;
     }
-    .table-component-portfolio-img-container:hover .table-component-portfolio-img-hover  {
+    .table-component-portfolio-img-container:hover
+      .table-component-portfolio-img-hover {
       cursor: pointer;
     }
   }
-
-  
 
   .table-component-content
     .table-component-footer-container
@@ -547,7 +563,7 @@ export default css.global`
   }
 
   .portfolio-table-container
-  .table-component-content
+    .table-component-content
     .table-component-footer-container
     .table-component-data.table-component-footer-title {
     width: 232px;
@@ -558,7 +574,8 @@ export default css.global`
     max-width: 50ch;
   }
 
-  .table-component-data.table-component-footer-title span.portfolio-table-footer,
+  .table-component-data.table-component-footer-title
+    span.portfolio-table-footer,
   .table-component-footer-explanation div {
     display: flex;
     align-items: center;
@@ -609,7 +626,7 @@ export default css.global`
     margin-left: -70px;
     box-shadow: 0px 2px 12px 0px #b3b3b3;
   }
-  
+
   .tooltipCustomImageStockList .tooltiptextCustomStockList--little {
     background-color: var(--clr-light);
     z-index: 999;
@@ -636,10 +653,11 @@ export default css.global`
   }
 
   @media (min-width: 1070px) {
-    .tooltipCustomStockList:not(.table-component-portfolio-img-container.tooltipCustomStockList) {
-       position: relative;
-     }
-
+    .tooltipCustomStockList:not(
+        .table-component-portfolio-img-container.tooltipCustomStockList
+      ) {
+      position: relative;
+    }
   }
 
   .tooltipCustomStockList .tooltiptextCustomStockList {
@@ -660,11 +678,12 @@ export default css.global`
     line-height: var(--lh-tooltip) !important;
   }
 
-  .tooltipCustomStockList .tooltiptextCountry{
+  .tooltipCustomStockList .tooltiptextCountry {
     bottom: 84% !important;
   }
 
-  .table-component-portfolio-img-container.tooltipCustomStockList .tooltiptextCustomStockList {
+  .table-component-portfolio-img-container.tooltipCustomStockList
+    .tooltiptextCustomStockList {
     width: 124px;
     right: 0;
     left: initial;
@@ -677,37 +696,42 @@ export default css.global`
     font-size: 13px !important;
   }
 
-  .table-component-portfolio-img-container.tooltipCustomStockList .tooltiptextCustomStockList::after {
+  .table-component-portfolio-img-container.tooltipCustomStockList
+    .tooltiptextCustomStockList::after {
     left: 50%;
     margin-left: 12px;
   }
 
-  .tooltipCustomStockList .tooltiptextCustomStockList.tooltiptextCustomGainFooter {
+  .tooltipCustomStockList
+    .tooltiptextCustomStockList.tooltiptextCustomGainFooter {
     width: 283px;
     left: initial;
     right: 0;
     bottom: 90%;
   }
 
-  .tooltipCustomStockList.tooltipCustomStockListChangeFooter .tooltiptextCustomStockList {
+  .tooltipCustomStockList.tooltipCustomStockListChangeFooter
+    .tooltiptextCustomStockList {
     width: 226px;
     left: initial;
     right: -100%;
     bottom: 90%;
   }
 
-  .tooltipCustomStockList .tooltiptextCustomStockList.tooltiptextCustomGainFooter::after {
+  .tooltipCustomStockList
+    .tooltiptextCustomStockList.tooltiptextCustomGainFooter::after {
     left: initial;
     right: 15%;
   }
 
   .table-component-alpha-col-item.tooltipCustomStockList
-  .tooltiptextCustomStockList {
+    .tooltiptextCustomStockList {
     width: 90%;
     left: 5%;
   }
 
-  .tooltipCustomStockList .tooltiptextCustomStockList.tooltiptextBottomStockList {
+  .tooltipCustomStockList
+    .tooltiptextCustomStockList.tooltiptextBottomStockList {
     bottom: -70%;
   }
 
@@ -736,8 +760,12 @@ export default css.global`
     bottom: 35px;
   }
 
-  .table-component-header .tootipCustomStockLlistDoubleSize .tooltiptextCustomStockList,
-  .table-component-header .tootipCustomStockLlistIndustry .tooltiptextCustomStockList {
+  .table-component-header
+    .tootipCustomStockLlistDoubleSize
+    .tooltiptextCustomStockList,
+  .table-component-header
+    .tootipCustomStockLlistIndustry
+    .tooltiptextCustomStockList {
     bottom: 50px;
   }
 
@@ -758,12 +786,12 @@ export default css.global`
   }
 
   .tooltipCustomStockList
-  .tooltiptextCustomStockList.tooltiptextBottomStockList::after {
-  bottom: 140%;
-  top: -55%;
-  left: 50%;
-  border-color: transparent transparent #272727 transparent;
-}
+    .tooltiptextCustomStockList.tooltiptextBottomStockList::after {
+    bottom: 140%;
+    top: -55%;
+    left: 50%;
+    border-color: transparent transparent #272727 transparent;
+  }
 
   .tootipCustomStockLlistIndustry .tooltiptextCustomStockList::after {
     top: 100%;
@@ -781,8 +809,6 @@ export default css.global`
     z-index: 1;
     transition: opacity 0.15s linear;
   }
-
-  
 
   /* ticker already in portfolio */
 
@@ -815,9 +841,8 @@ export default css.global`
     justify-content: center;
     align-items: center;
     height: 9px;
-    width:10px;
+    width: 10px;
   }
-
 
   .table-component-column-company-ticker-is-in-portfolio:hover {
     background-color: var(--clr-lowgrey);
@@ -836,14 +861,14 @@ export default css.global`
     margin-left: 18px;
     top: -8px;
     z-index: 99999;
-     font-family: var(--ff-primary);
+    font-family: var(--ff-primary);
     font-size: var(--fs-tooltip) !important;
     line-height: var(--lh-tooltip) !important;
   }
-  
-    .table-component-column-company-ticker-is-in-portfolio-tooltip.my-portfolio-tooltip {
-        padding: 9px;
-    }
+
+  .table-component-column-company-ticker-is-in-portfolio-tooltip.my-portfolio-tooltip {
+    padding: 9px;
+  }
 
   .table-component-column-company-ticker-is-in-portfolio-tooltip::after,
   .table-component-column-company-ticker-is-in-portfolio-over::after {
@@ -912,306 +937,312 @@ export default css.global`
     text-overflow: ellipsis;
   }
 
-.table-component-alpha-col-dropdown-mobile-header {
-  display: none;
-}
+  .table-component-alpha-col-dropdown-mobile-header {
+    display: none;
+  }
 
-.compare_page_border{
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-  overflow:hidden;
-}
+  .compare_page_border {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    overflow: hidden;
+  }
 
-/* columns sizing with the alpha extra column */
+  /* columns sizing with the alpha extra column */
 
-.table-component-with-alpha-column .table-component-column-rank,
-.table-component-with-alpha-column
-  .table-component-data.table-component-column-rank
-  span:first-child,
-.table-component-with-alpha-column
-  .table-component-data-head.table-component-column-rank
-  span:first-child,
-.table-component-with-alpha-column .table-component-data-head.table-component-column-rank {
-  width: 70px;
-  max-width: 70px;
-  min-width: 70px;
-}
-
-.table-component-column-rank span{
-  padding-left:31px;
-  padding-right:11px;
-}
-
-.table-component-with-alpha-column .table-component-company-column,
-.table-component-with-alpha-column .table-component-column-company {
-  min-width: 227px;
-  width: 227px;
-  max-width: 227px;
-}
-
-
-.ticker-etf-portfolio .table-component-column-company{
-  min-width: 232px;
-  width: 232px;
-  max-width: 232px;
-}
-
-.table-component-with-alpha-column.add-to-portfolio-column .table-component-company-column,
-.table-component-with-alpha-column.add-to-portfolio-column .table-component-column-company {
-  min-width: 232px;
-  width: 232px;
-  max-width: 232px;
-}
-
-.table-component-with-alpha-column .table-component-company-colum {
-  padding-left: 10px;
-}
-
-.table-component-content
+  .table-component-with-alpha-column .table-component-column-rank,
   .table-component-with-alpha-column
-  .table-component-data.table-component-column-industry,
-.table-component-content
+    .table-component-data.table-component-column-rank
+    span:first-child,
   .table-component-with-alpha-column
-  .table-component-data.table-component-column-sector {
-  padding-left: 7px;
-}
-
-.table-component-with-alpha-column .table-component-column-country-desktop,
-.table-component-with-alpha-column .table-component-column-country-mobile {
-  width: 82px;
-}
-
-.table-component-with-alpha-column .table-component-data-head.table-component-column-score,
-.table-component-with-alpha-column .table-component-data.table-component-column-score,
-.table-component-content
+    .table-component-data-head.table-component-column-rank
+    span:first-child,
   .table-component-with-alpha-column
-  .table-component-doughnuts {
-  width: 80px;
-  min-width: 80px;
-  max-width: 80px;
-}
+    .table-component-data-head.table-component-column-rank {
+    width: 70px;
+    max-width: 70px;
+    min-width: 70px;
+  }
 
-.table-component-with-alpha-column .table-component-column-change {
-  width: 76px;
-}
+  .table-component-column-rank span {
+    padding-left: 31px;
+    padding-right: 11px;
+  }
 
-.table-component-with-alpha-column.add-to-portfolio-column .table-component-column-change {
-  width: 80px;
-}
+  .table-component-with-alpha-column .table-component-company-column,
+  .table-component-with-alpha-column .table-component-column-company {
+    min-width: 227px;
+    width: 227px;
+    max-width: 227px;
+  }
 
-.table-component-with-alpha-column .table-component-column-technical,
-.table-component-with-alpha-column .table-component-column-sentiment,
-.table-component-with-alpha-column .table-component-column-fundamental {
-  width: 84px;
-}
+  .ticker-etf-portfolio .table-component-column-company {
+    min-width: 232px;
+    width: 232px;
+    max-width: 232px;
+  }
 
-.table-component-with-alpha-column.add-to-portfolio-column .table-component-column-fundamental {
-  width: 86px;
-}
+  .table-component-with-alpha-column.add-to-portfolio-column
+    .table-component-company-column,
+  .table-component-with-alpha-column.add-to-portfolio-column
+    .table-component-column-company {
+    min-width: 232px;
+    width: 232px;
+    max-width: 232px;
+  }
 
-.table-component-with-alpha-column.add-to-portfolio-column .table-component-column-technical,
-.table-component-with-alpha-column.add-to-portfolio-column .table-component-column-sentiment {
-  width: 86px;
-}
+  .table-component-with-alpha-column .table-component-company-colum {
+    padding-left: 10px;
+  }
 
-.table-component-with-alpha-column .table-component-column-risk {
-  width: 80px;
-}
+  .table-component-content
+    .table-component-with-alpha-column
+    .table-component-data.table-component-column-industry,
+  .table-component-content
+    .table-component-with-alpha-column
+    .table-component-data.table-component-column-sector {
+    padding-left: 7px;
+  }
 
-.table-component-alpha-col {
-  text-align: center;
-  width: 88px;
-  max-width: 88px;
-}
+  .table-component-with-alpha-column .table-component-column-country-desktop,
+  .table-component-with-alpha-column .table-component-column-country-mobile {
+    width: 82px;
+  }
 
-.add-to-portfolio-column .table-component-alpha-col,
-.ticker-etf-portfolio .table-component-alpha-col {
-  width: 92px;
-  max-width: 92px;
-}
+  .table-component-with-alpha-column
+    .table-component-data-head.table-component-column-score,
+  .table-component-with-alpha-column
+    .table-component-data.table-component-column-score,
+  .table-component-content
+    .table-component-with-alpha-column
+    .table-component-doughnuts {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+  }
 
-.table-component-with-alpha-column .table-component-column-sector,
-.table-component-with-alpha-column .table-component-column-industry {
-  width: 130px;
-  max-width: 130px;
-}
+  .table-component-with-alpha-column .table-component-column-change {
+    width: 76px;
+  }
 
-.table-component-with-alpha-column .table-component-column-sector,
-.table-component-with-alpha-column .table-component-column-industry {
-  width: 130px;
-  max-width: 130px;
-}
+  .table-component-with-alpha-column.add-to-portfolio-column
+    .table-component-column-change {
+    width: 80px;
+  }
 
-.table-component-with-alpha-column.add-to-portfolio-column .table-component-column-sector,
-.table-component-with-alpha-column.add-to-portfolio-column .table-component-column-industry {
-  width: 161px;
-  max-width: 161px;
-}
+  .table-component-with-alpha-column .table-component-column-technical,
+  .table-component-with-alpha-column .table-component-column-sentiment,
+  .table-component-with-alpha-column .table-component-column-fundamental {
+    width: 84px;
+  }
 
-.table-component-with-alpha-column .table-component-portfolio{
-  width: 64px;
-}
+  .table-component-with-alpha-column.add-to-portfolio-column
+    .table-component-column-fundamental {
+    width: 86px;
+  }
 
-/* / columns sizing with the alpha extra column */
+  .table-component-with-alpha-column.add-to-portfolio-column
+    .table-component-column-technical,
+  .table-component-with-alpha-column.add-to-portfolio-column
+    .table-component-column-sentiment {
+    width: 86px;
+  }
 
-.table-component-alpha-col-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 4px 0 4px;
-  width:100%;
-}
+  .table-component-with-alpha-column .table-component-column-risk {
+    width: 80px;
+  }
 
-.table-component-alpha-col-title {
-  width:100%;
-}
+  .table-component-alpha-col {
+    text-align: center;
+    width: 88px;
+    max-width: 88px;
+  }
 
-.table-component-alpha-col-content img {
-  margin-left: 4px;
-}
+  .add-to-portfolio-column .table-component-alpha-col,
+  .ticker-etf-portfolio .table-component-alpha-col {
+    width: 92px;
+    max-width: 92px;
+  }
 
-.table-component-alpha-col-image-hover {
-  display: none;
-}
+  .table-component-with-alpha-column .table-component-column-sector,
+  .table-component-with-alpha-column .table-component-column-industry {
+    width: 130px;
+    max-width: 130px;
+  }
 
-.table-component-alpha-col-image-container:hover
-  .table-component-alpha-col-image {
-  display: none;
-}
+  .table-component-with-alpha-column .table-component-column-sector,
+  .table-component-with-alpha-column .table-component-column-industry {
+    width: 130px;
+    max-width: 130px;
+  }
 
-.table-component-alpha-col-image-container:hover
+  .table-component-with-alpha-column.add-to-portfolio-column
+    .table-component-column-sector,
+  .table-component-with-alpha-column.add-to-portfolio-column
+    .table-component-column-industry {
+    width: 161px;
+    max-width: 161px;
+  }
+
+  .table-component-with-alpha-column .table-component-portfolio {
+    width: 64px;
+  }
+
+  /* / columns sizing with the alpha extra column */
+
+  .table-component-alpha-col-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px 0 4px;
+    width: 100%;
+  }
+
+  .table-component-alpha-col-title {
+    width: 100%;
+  }
+
+  .table-component-alpha-col-content img {
+    margin-left: 4px;
+  }
+
   .table-component-alpha-col-image-hover {
-  display: inline-block;
-  cursor: pointer;
-}
+    display: none;
+  }
 
-.table-component-industry-dropdown.table-component-industry-dropdown-hidden {
-  display: none;
-}
+  .table-component-alpha-col-image-container:hover
+    .table-component-alpha-col-image {
+    display: none;
+  }
 
+  .table-component-alpha-col-image-container:hover
+    .table-component-alpha-col-image-hover {
+    display: inline-block;
+    cursor: pointer;
+  }
 
+  .table-component-industry-dropdown.table-component-industry-dropdown-hidden {
+    display: none;
+  }
 
-.table-component-alpha-col-dropdown,
-.table-component-industry-dropdown {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-top: 48px;
-  background-color: var(--clr-light);
-  color: var(--clr-txt);
-  text-transform: none;
-  width: 188px;
-  border-radius: 8px;
-  z-index: 1;
-  padding: 11px 0;
-  box-shadow: 0 0 12px 0 rgba(179, 179, 179, 0.5);
-  max-height: 322px;
-  overflow-y: scroll;
-}
-.table-component-alpha-col-dropdown__top {
-  margin-top: 48px;
-}
-.table-component-alpha-col-dropdown__short,
-.table-component-industry-dropdown__short {
+  .table-component-alpha-col-dropdown,
+  .table-component-industry-dropdown {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 48px;
+    background-color: var(--clr-light);
+    color: var(--clr-txt);
+    text-transform: none;
+    width: 188px;
+    border-radius: 8px;
+    z-index: 1;
+    padding: 11px 0;
+    box-shadow: 0 0 12px 0 rgba(179, 179, 179, 0.5);
+    max-height: 322px;
+    overflow-y: scroll;
+  }
+  .table-component-alpha-col-dropdown__top {
+    margin-top: 48px;
+  }
+  .table-component-alpha-col-dropdown__short,
+  .table-component-industry-dropdown__short {
     width: 170px;
-}
-.table-component-focus-dropdown {
-  overflow: hidden;
-}
+  }
+  .table-component-focus-dropdown {
+    overflow: hidden;
+  }
 
-.small_height{
-  max-height: 277px;
-}
+  .small_height {
+    max-height: 277px;
+  }
 
-.table-component-alpha-col-item,
-.table-component-industry-dropdown-item {
-  height: 42px;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  width: 100%;
-  font-family: var(--ff-primary);
-  font-size: 14px;
-  padding: 0 12px;
-  cursor: pointer;
-  justify-content: space-between;
-  color: var(--clr-txt);
-}
+  .table-component-alpha-col-item,
+  .table-component-industry-dropdown-item {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    font-family: var(--ff-primary);
+    font-size: 14px;
+    padding: 0 12px;
+    cursor: pointer;
+    justify-content: space-between;
+    color: var(--clr-txt);
+  }
 
-.table-component-industry-dropdown-item {
-  text-transform: capitalize;
-}
+  .table-component-industry-dropdown-item {
+    text-transform: capitalize;
+  }
 
-.table-component-alpha-col-item:hover,
-.table-component-industry-dropdown-item:hover {
-  background-color: var(--clr-limitationModal);
-}
+  .table-component-alpha-col-item:hover,
+  .table-component-industry-dropdown-item:hover {
+    background-color: var(--clr-limitationModal);
+  }
 
-.table-component-alpha-col-item,
-.table-component-industry-dropdown-item {
-  border-top: 1px solid var(--clr-border);
-}
+  .table-component-alpha-col-item,
+  .table-component-industry-dropdown-item {
+    border-top: 1px solid var(--clr-border);
+  }
 
-.table-component-alpha-col-item:last-child,
-.table-component-industry-dropdown-item:last-child {
-  border-bottom: 1px solid var(--clr-border);
-}
+  .table-component-alpha-col-item:last-child,
+  .table-component-industry-dropdown-item:last-child {
+    border-bottom: 1px solid var(--clr-border);
+  }
 
-.table-component-alpha-col-item.table-component-alpha-col-chosen-item,
-.table-component-industry-dropdown-item.table-component-industry-dropdown-chosen-item {
-  background-color: var(--clr-aiScoreColumn);
-  color: var(--clr-txt);
-}
+  .table-component-alpha-col-item.table-component-alpha-col-chosen-item,
+  .table-component-industry-dropdown-item.table-component-industry-dropdown-chosen-item {
+    background-color: var(--clr-aiScoreColumn);
+    color: var(--clr-txt);
+  }
 
-.table-component-alpha-col-chosen-item img,
-.table-component-industry-dropdown-item img,
-.table-component-blue-check {
-  width: 13px;
-  height: 13px;
-}
+  .table-component-alpha-col-chosen-item img,
+  .table-component-industry-dropdown-item img,
+  .table-component-blue-check {
+    width: 13px;
+    height: 13px;
+  }
 
-.industry-col-empty {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+  .industry-col-empty {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-.positive {
-  color: var(--clr-green);
-}
+  .positive {
+    color: var(--clr-green);
+  }
 
-.negative {
-  color: var(--clr-red);
-}
+  .negative {
+    color: var(--clr-red);
+  }
 
-.table-component-footer-container {
-  border-top: 2px solid var(--clr-border);
-  border-bottom: 2px solid var(--clr-border);
-}
+  .table-component-footer-container {
+    border-top: 2px solid var(--clr-border);
+    border-bottom: 2px solid var(--clr-border);
+  }
 
-.blur-effect {
-  filter: blur(3px);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+  .blur-effect {
+    filter: blur(3px);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
-/* / ALPHA SIGNALS COLUMN */
-
+  /* / ALPHA SIGNALS COLUMN */
 
   @media (max-width: 1070px) {
-
-    .table-component-content .table-container .table-component-data-head:hover{
+    .table-component-content .table-container .table-component-data-head:hover {
       background-color: var(--clr-newDarkgrey);
     }
 
-    .pl-20{
-      padding-left:0px;
+    .pl-20 {
+      padding-left: 0px;
     }
-  
+
     .table-component-content .table-container {
       max-width: initial;
       width: auto;
@@ -1222,7 +1253,7 @@ export default css.global`
       display: none;
     }
 
-    .table-component-trash .tooltiptextCustomStockList{
+    .table-component-trash .tooltiptextCustomStockList {
       display: none;
     }
 
@@ -1254,7 +1285,7 @@ export default css.global`
       overflow-y: hidden;
     }
 
-    .compare_page_border{
+    .compare_page_border {
       border-top-right-radius: 0px;
       border-top-left-radius: 0px;
     }
@@ -1269,7 +1300,9 @@ export default css.global`
       pointer-events: initial;
     }
 
-    .table-component-column-company-ticker-is-in-portfolio-tooltip:not(.table-component-column-company-ticker-is-in-portfolio-tooltip.table-component-column-company-ticker-is-in-portfolio-over)::after {
+    .table-component-column-company-ticker-is-in-portfolio-tooltip:not(
+        .table-component-column-company-ticker-is-in-portfolio-tooltip.table-component-column-company-ticker-is-in-portfolio-over
+      )::after {
       border-color: transparent;
     }
 
@@ -1327,11 +1360,14 @@ export default css.global`
       border-right: 0px;
     }
 
-    .table-component-header .table-component-column-rank{
+    .table-component-header .table-component-column-rank {
       border-right: 1px solid var(--clr-tableBorder) !important;
     }
 
-    .table-component-body .table-component-row .table-component-column-rank span{
+    .table-component-body
+      .table-component-row
+      .table-component-column-rank
+      span {
       padding-left: 10px;
       padding-right: 11px;
     }
@@ -1346,8 +1382,10 @@ export default css.global`
 
     .table-component-column-rank,
     .table-component-footer-title,
-    .table-component-content .table-component-data-head.table-component-column-rank,
-    .table-component-content .table-component-data-head.table-component-footer-title {
+    .table-component-content
+      .table-component-data-head.table-component-column-rank,
+    .table-component-content
+      .table-component-data-head.table-component-footer-title {
       position: absolute;
       position: -webkit-absolute;
       left: 0px;
@@ -1360,9 +1398,9 @@ export default css.global`
       min-width: 50px;
     }
 
-    .table-component-column-rank, 
-    .table-component-data.table-component-column-rank span:first-child, 
-    .table-component-data-head.table-component-column-rank span:first-child, 
+    .table-component-column-rank,
+    .table-component-data.table-component-column-rank span:first-child,
+    .table-component-data-head.table-component-column-rank span:first-child,
     .table-component-data-head.table-component-column-rank {
       width: 50px;
       max-width: 50px;
@@ -1378,7 +1416,8 @@ export default css.global`
       top: 1px;
     }
 
-    .table-component-with-alpha-column.add-to-portfolio-column .table-component-column-company {
+    .table-component-with-alpha-column.add-to-portfolio-column
+      .table-component-column-company {
       width: 151px;
       max-width: 151px;
       min-width: 151px;
@@ -1410,8 +1449,10 @@ export default css.global`
       z-index: 2;
     }
 
-    .portfolio-table-container .table-component-data-head.table-component-column-company,
-    .portfolio-table-container .table-component-data.table-component-column-company {
+    .portfolio-table-container
+      .table-component-data-head.table-component-column-company,
+    .portfolio-table-container
+      .table-component-data.table-component-column-company {
       left: 0px;
     }
 
@@ -1442,7 +1483,9 @@ export default css.global`
       display: none !important;
     }
 
-    .table-component-content .table-component-body .table-component-row:not(:last-child) {
+    .table-component-content
+      .table-component-body
+      .table-component-row:not(:last-child) {
       border-bottom: 0.8px solid var(--clr-border);
     }
 
@@ -1451,7 +1494,9 @@ export default css.global`
     }
 
     @supports (-webkit-touch-callout: none) {
-      .table-component-content .table-component-body .table-component-row:not(:last-child) {
+      .table-component-content
+        .table-component-body
+        .table-component-row:not(:last-child) {
         border-bottom: 1px solid var(--clr-border);
       }
     }
@@ -1464,25 +1509,31 @@ export default css.global`
       padding: 30px 40px;
     }
 
-    .table-component-container-empty .table-component-content .table-component-header {
+    .table-component-container-empty
+      .table-component-content
+      .table-component-header {
       display: none;
     }
 
     .table-component-container.table-component-container-empty,
-  .table-component-container-empty .table-container {
-    border-radius: 0;
-  }
+    .table-component-container-empty .table-container {
+      border-radius: 0;
+    }
 
     /* columns sizig */
     .table-component-column-rank {
       width: 50px;
       margin-left: 0;
     }
-    
+
     .table-component-column-company
-      div:not(div.table-component-column-company-ticker-is-in-portfolio-tooltip-item, div.table-component-column-company-ticker-is-in-portfolio-tooltip-title),
+      div:not(
+        div.table-component-column-company-ticker-is-in-portfolio-tooltip-item,
+        div.table-component-column-company-ticker-is-in-portfolio-tooltip-title
+      ),
     .portfolio-table-container .table-component-column-company div,
-    .portfolio-table-container .table-component-data-head.table-component-column-company,
+    .portfolio-table-container
+      .table-component-data-head.table-component-column-company,
     .table-component-data-head.table-component-column-company,
     .table-component-data.table-component-column-company {
       width: 150px;
@@ -1495,7 +1546,7 @@ export default css.global`
     }
 
     .table-component-company-colum .table-component-company-name {
-      font-size:12px;
+      font-size: 12px;
       display: inline-block;
       width: 131px;
       min-width: 131px;
@@ -1550,9 +1601,8 @@ export default css.global`
     .table-component-column-industry a {
       display: flex;
       width: 105px;
-      justify-content:center;
+      justify-content: center;
     }
-
 
     .table-component-data.table-component-column-gain .column-gain-content {
       width: 63px;
@@ -1565,13 +1615,15 @@ export default css.global`
       align-items: center;
       width: 60px;
     }
-    
-    .table-component-content .table-component-data-head{
+
+    .table-component-content .table-component-data-head {
       height: 48px;
     }
 
-    .table-component-content .table-component-data-head.table-component-column-rank,
-    .table-component-content .table-component-data-head.table-component-column-company {
+    .table-component-content
+      .table-component-data-head.table-component-column-rank,
+    .table-component-content
+      .table-component-data-head.table-component-column-company {
       height: 48px;
     }
 
@@ -1597,7 +1649,7 @@ export default css.global`
       left: 0;
       background-color: var(--clr-light);
       z-index: 9;
-      width:100vw;
+      width: 100vw;
     }
 
     .table-component-body .table-component-column-rank span {
@@ -1636,7 +1688,8 @@ export default css.global`
       margin-left: -7px;
     }
 
-    .tooltipCustomStockList.tooltipCustomStockListChangeFooter .tooltiptextCustomStockList {
+    .tooltipCustomStockList.tooltipCustomStockListChangeFooter
+      .tooltiptextCustomStockList {
       width: 200%;
       left: 0;
       right: 0;
@@ -1649,12 +1702,14 @@ export default css.global`
       margin-left: 0;
     }
 
-    .tooltipCustomStockList .tooltiptextCustomStockList.tooltiptextCustomGainFooter {
+    .tooltipCustomStockList
+      .tooltiptextCustomStockList.tooltiptextCustomGainFooter {
       width: 200%;
       left: 0;
     }
-  
-    .tooltipCustomStockList .tooltiptextCustomStockList.tooltiptextCustomGainFooter::after {
+
+    .tooltipCustomStockList
+      .tooltiptextCustomStockList.tooltiptextCustomGainFooter::after {
       left: 20%;
       right: initial;
     }
@@ -1682,7 +1737,8 @@ export default css.global`
       border-color: transparent #272727 transparent transparent;
     }
 
-    .table-component-portfolio-img-container.tooltipCustomStockList:hover .tooltiptextCustomStockList {
+    .table-component-portfolio-img-container.tooltipCustomStockList:hover
+      .tooltiptextCustomStockList {
       display: none;
     }
 
@@ -1696,38 +1752,39 @@ export default css.global`
     .table-component-content
       .table-component-footer-container
       .table-component-data.table-component-footer-title {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding-left: 10px;
-        width: 100%;
-        max-width: 199px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      width: 100%;
+      max-width: 199px;
     }
 
-    .portfolio-table-container 
+    .portfolio-table-container
       .table-component-content
       .table-component-footer-container
       .table-component-data.table-component-footer-title {
-        max-width: 151px;
+      max-width: 151px;
     }
 
-
     table-component-content
-    .table-component-footer-container
-    .table-component-with-alpha-column
-    .table-component-data.table-component-footer-title {
+      .table-component-footer-container
+      .table-component-with-alpha-column
+      .table-component-data.table-component-footer-title {
       max-width: 171px;
     }
 
-    .table-component-content .table-component-footer-container .table-component-data.table-component-footer-title {
+    .table-component-content
+      .table-component-footer-container
+      .table-component-data.table-component-footer-title {
       min-width: auto !important;
     }
 
-    .table-component-footer-container .table-component-data:not(:first-child, :last-child) {
+    .table-component-footer-container
+      .table-component-data:not(:first-child, :last-child) {
       border-top: 0;
     }
 
-    
     .table-component-content-loading {
       border: none;
       border-bottom: 1px solid var(--clr-border);
@@ -1736,174 +1793,182 @@ export default css.global`
 
     /* ALPHA SIGNALS COLUMN */
 
-  .table-component-alpha-col-dropdown,
-  .table-component-industry-dropdown {
-    display:none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    min-height: 100vh;
-    height: 100%;
-    z-index: 999999999999999;
-    background-color: var(--clr-light);
-    padding: 0;
-    margin-top: 0;
-    border-radius: 0;
-  }
+    .table-component-alpha-col-dropdown,
+    .table-component-industry-dropdown {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      min-height: 100vh;
+      height: 100%;
+      z-index: 999999999999999;
+      background-color: var(--clr-light);
+      padding: 0;
+      margin-top: 0;
+      border-radius: 0;
+    }
 
-  .table-component-alpha-col-item,
-  .table-component-industry-dropdown-item {
-    font-size: 15px;
-    height: 60px;
-  }
+    .table-component-alpha-col-item,
+    .table-component-industry-dropdown-item {
+      font-size: 15px;
+      height: 60px;
+    }
 
-  .table-component-alpha-col-item:last-child {
-    border-bottom: 1px solid var(--clr-border);
-    margin-bottom: 33px;
-  }
+    .table-component-alpha-col-item:last-child {
+      border-bottom: 1px solid var(--clr-border);
+      margin-bottom: 33px;
+    }
 
-  .table-component-alpha-col-dropdown-mobile-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px 12px 7px;
-    text-align: left;
-    color: #838e91;
-    border-bottom: 1px solid var(--clr-border);
-    font-size: 12px;
-  }
+    .table-component-alpha-col-dropdown-mobile-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding: 15px 12px 7px;
+      text-align: left;
+      color: #838e91;
+      border-bottom: 1px solid var(--clr-border);
+      font-size: 12px;
+    }
 
-  .table-component-alpha-col-dropdown-mobile-header-image {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
-  }
+    .table-component-alpha-col-dropdown-mobile-header-image {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
 
-  .table-component-alpha-col-dropdown-mobile-header-image img {
-    width: 15px;
-    height: 15px;
-  }
+    .table-component-alpha-col-dropdown-mobile-header-image img {
+      width: 15px;
+      height: 15px;
+    }
 
-  /* columns sizing with the alpha extra column */
+    /* columns sizing with the alpha extra column */
 
-  .table-component-with-alpha-column .table-component-column-rank,
-  .table-component-with-alpha-column
-    .table-component-data.table-component-column-rank
-    span:first-child,
-  .table-component-with-alpha-column
-    .table-component-data-head.table-component-column-rank
-    span:first-child,
-  .table-component-with-alpha-column .table-component-data-head.table-component-column-rank {
-    width: 50px;
-    max-width: 50px;
-    min-width: 50px;
-  }
-
-  .table-component-with-alpha-column .table-component-company-column,
-  .table-component-with-alpha-column .table-component-data-head.table-component-column-company,
-  .table-component-with-alpha-column
-    .table-component-column-company
-    div:not(div.table-component-column-company-ticker-is-in-portfolio-tooltip-item, .table-component-with-alpha-column
-      div.table-component-column-company-ticker-is-in-portfolio-tooltip-title) {
-    min-width: 151px;
-    max-width: 151px;
-    width: 151px;
-  }
-
-  .table-component-with-alpha-column .table-component-company-colum {
-    padding-left: 10px;
-  }
-
-  .table-component-content
+    .table-component-with-alpha-column .table-component-column-rank,
     .table-component-with-alpha-column
-    .table-component-data.table-component-column-industry,
-  .table-component-content
+      .table-component-data.table-component-column-rank
+      span:first-child,
     .table-component-with-alpha-column
-    .table-component-data.table-component-column-sector {
-    padding-left: 7px;
-  }
-
-  .table-component-with-alpha-column .table-component-column-country-mobile,
-  .table-component-with-alpha-column
-    .table-component-column-country-mobile
-    span {
-    width: 62px;
-  }
-
-  .table-component-portfolio {
-    width: 72px;
-  }
-
-  .table-component-data-head.table-component-column-score {
-    width: 302px;
-  }
-
-  .table-component-with-alpha-column .table-component-data-head.table-component-column-score,
-  .table-component-with-alpha-column .table-component-data.table-component-column-score {
-    width: calc(94px + 201px);
-    min-width: calc(94px + 201px);
-    max-width: calc(94px + 201px);
-  }
-
-
-  .table-component-content
+      .table-component-data-head.table-component-column-rank
+      span:first-child,
     .table-component-with-alpha-column
-    .table-component-doughnuts {
-    width: 94px;
-    min-width: 94px;
-    max-width: 94px;
-  }
+      .table-component-data-head.table-component-column-rank {
+      width: 50px;
+      max-width: 50px;
+      min-width: 50px;
+    }
 
-  .table-component-with-alpha-column .table-component-column-score {
-    padding-left: 201px !important;
-  }
+    .table-component-with-alpha-column .table-component-company-column,
+    .table-component-with-alpha-column
+      .table-component-data-head.table-component-column-company,
+    .table-component-with-alpha-column
+      .table-component-column-company
+      div:not(
+        div.table-component-column-company-ticker-is-in-portfolio-tooltip-item,
+        .table-component-with-alpha-column
+          div.table-component-column-company-ticker-is-in-portfolio-tooltip-title
+      ) {
+      min-width: 151px;
+      max-width: 151px;
+      width: 151px;
+    }
 
-  .table-component-with-alpha-column .table-component-column-change,
-  .table-component-with-alpha-column .table-component-column-risk,
-  .table-component-with-alpha-column .table-component-column-technical,
-  .table-component-with-alpha-column .table-component-column-sentiment {
-    width: 72px;
-    min-width: 72px;
-  }
+    .table-component-with-alpha-column .table-component-company-colum {
+      padding-left: 10px;
+    }
 
-  .table-component-with-alpha-column .table-component-column-fundamental {
-    width: 82px;
-  }
+    .table-component-content
+      .table-component-with-alpha-column
+      .table-component-data.table-component-column-industry,
+    .table-component-content
+      .table-component-with-alpha-column
+      .table-component-data.table-component-column-sector {
+      padding-left: 7px;
+    }
 
-  .table-component-alpha-col {
-    text-align: center;
-    width: 94px;
-    max-width: 94px;
-    min-width: 94px;
-  }
+    .table-component-with-alpha-column .table-component-column-country-mobile,
+    .table-component-with-alpha-column
+      .table-component-column-country-mobile
+      span {
+      width: 62px;
+    }
 
-  .table-component-with-alpha-column .table-component-column-sector,
-  .table-component-with-alpha-column .table-component-column-industry {
-    width: 135px;
-    max-width: 135px;
-    min-width: 135px;
-  }
+    .table-component-portfolio {
+      width: 72px;
+    }
 
-  /* / columns sizing with the alpha extra column */
+    .table-component-data-head.table-component-column-score {
+      width: 302px;
+    }
 
-  
-  .table-component-alpha-col-dropdown-desktop {
-    display: none;
-  }
+    .table-component-with-alpha-column
+      .table-component-data-head.table-component-column-score,
+    .table-component-with-alpha-column
+      .table-component-data.table-component-column-score {
+      width: calc(94px + 201px);
+      min-width: calc(94px + 201px);
+      max-width: calc(94px + 201px);
+    }
 
-  .table-component-alpha-col-dropdown-mobile {
-    display: block;
-  }
+    .table-component-content
+      .table-component-with-alpha-column
+      .table-component-doughnuts {
+      width: 94px;
+      min-width: 94px;
+      max-width: 94px;
+    }
 
-  /*/ ALPHA SIGNALS COLUMN */
+    .table-component-with-alpha-column .table-component-column-score {
+      padding-left: 201px !important;
+    }
+
+    .table-component-with-alpha-column .table-component-column-change,
+    .table-component-with-alpha-column .table-component-column-risk,
+    .table-component-with-alpha-column .table-component-column-technical,
+    .table-component-with-alpha-column .table-component-column-sentiment {
+      width: 72px;
+      min-width: 72px;
+    }
+
+    .table-component-with-alpha-column .table-component-column-fundamental {
+      width: 82px;
+    }
+
+    .table-component-alpha-col {
+      text-align: center;
+      width: 94px;
+      max-width: 94px;
+      min-width: 94px;
+    }
+
+    .table-component-with-alpha-column .table-component-column-sector,
+    .table-component-with-alpha-column .table-component-column-industry {
+      width: 135px;
+      max-width: 135px;
+      min-width: 135px;
+    }
+
+    /* / columns sizing with the alpha extra column */
+
+    .table-component-alpha-col-dropdown-desktop {
+      display: none;
+    }
+
+    .table-component-alpha-col-dropdown-mobile {
+      display: block;
+    }
+
+    /*/ ALPHA SIGNALS COLUMN */
   }
 
   @media (max-width: 770px) {
-    .table-component-with-alpha-column .table-component-column-country-mobile .tooltipCustomStockList .tooltiptextCustomStockList {
+    .table-component-with-alpha-column
+      .table-component-column-country-mobile
+      .tooltipCustomStockList
+      .tooltiptextCustomStockList {
       display: none;
     }
   }
@@ -1913,7 +1978,7 @@ export default css.global`
       white-space: normal;
     }
 
-    .table-component-column-company-ticker-is-a-trade-idea{
+    .table-component-column-company-ticker-is-a-trade-idea {
       white-space: normal;
     }
 
@@ -1926,17 +1991,17 @@ export default css.global`
       top: initial;
     }
 
-    .table-component-portfolio{
-      justify-content:right !important;
+    .table-component-portfolio {
+      justify-content: right !important;
     }
 
-    .table-component-company-colum .table-component-company-name{
+    .table-component-company-colum .table-component-company-name {
       font-size: 12px;
       line-height: 16px;
     }
 
-    .table-component-portfolio-img-container{
-      margin-right:23px;
+    .table-component-portfolio-img-container {
+      margin-right: 23px;
     }
   }
 `;
@@ -1950,30 +2015,28 @@ export const dropdownCSS = css`
     background: var(--clr-aiScoreColumn);
   }
 
-  .body-text-size{
-    font-size:14px !important;
+  .body-text-size {
+    font-size: 14px !important;
     font-family: var(--ff-primary) !important;
   }
 
-  .loss-container-body{
+  .loss-container-body {
     height: 60px;
     border-bottom: 1px solid var(--clr-border);
     padding: 0 15px;
   }
 
-  .loss-item{
-    height:100%;
+  .loss-item {
+    height: 100%;
   }
 
-  .loss-item > span{
-    color:black;
+  .loss-item > span {
+    color: black;
   }
-
-
-`
+`;
 
 export const homeTable = css`
-  .table-component-with-alpha-column .table-component-company-column, 
+  .table-component-with-alpha-column .table-component-company-column,
   .table-component-with-alpha-column .table-component-column-company {
     width: 232px;
     min-width: 232px;
@@ -1984,8 +2047,8 @@ export const homeTable = css`
     width: 80px;
   }
 
-  .table-component-with-alpha-column .table-component-column-technical, 
-  .table-component-with-alpha-column .table-component-column-sentiment, 
+  .table-component-with-alpha-column .table-component-column-technical,
+  .table-component-with-alpha-column .table-component-column-sentiment,
   .table-component-with-alpha-column .table-component-column-fundamental {
     width: 86px;
   }
@@ -1996,20 +2059,21 @@ export const homeTable = css`
   }
 
   @media (max-width: 770px) {
-    .table-component-with-alpha-column .table-component-company-column, 
+    .table-component-with-alpha-column .table-component-company-column,
     .table-component-with-alpha-column .table-component-column-company {
       width: 154px;
       min-width: 154px;
       max-width: 154px;
     }
 
-    .table-component-with-alpha-column .table-component-data-head.table-component-column-score, 
-    .table-component-with-alpha-column .table-component-data.table-component-column-score {
+    .table-component-with-alpha-column
+      .table-component-data-head.table-component-column-score,
+    .table-component-with-alpha-column
+      .table-component-data.table-component-column-score {
       width: calc(80px + 154px + 70px);
       min-width: calc(80px + 154px + 70px);
       max-width: calc(80px + 154px + 70px);
     }
   }
-
-`
-export const blankHomeTable = css``
+`;
+export const blankHomeTable = css``;
