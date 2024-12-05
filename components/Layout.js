@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="layout ">
+      <div className="layout">
         <Header />
         <main className="section-content-wrapper">{children}</main>
         {/*<Footer/>*/}
