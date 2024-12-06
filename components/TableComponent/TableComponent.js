@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import tableComponentStyles from "./TableComponentStyles";
 import portfolioStyles from "../Portfolio/PortfolioStyles";
+import useStocks from "../../hooks/useStocks/useStocks";
 
 const TableComponent = () => {
+  const [stocks, setStocks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { getStocks } = useStocks();
+
+  useEffect(() => {
+    const fetchStocks = async () => {
+      setLoading(true);
+      try {
+        const response = await getStocks({
+          limit: 5,
+          order_by: "rank",
+          order_dir: "asc",
+        });
+
+        if (response && response.data) {
+          setStocks(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching stocks:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStocks();
+  }, [getStocks]);
+
   const headers = [
     {
       id: "1",
@@ -60,6 +88,20 @@ const TableComponent = () => {
         "Risk subscore based on the negative price fluctuations (semi-deviation) latest 500 market days. The higher the score, the lower the downside risk.",
     },
   ];
+
+  const renderStockRow = (stock) => (
+    <div key={stock.id} className="table-component-row justify-between">
+      <div className="table-component-column-rank">{stock.id}</div>
+      <div className="table-component-column-company">{stock.company}</div>
+      <div className="table-component-column-country">{stock.country}</div>
+      <div className="table-component-column-score">{stock.shortName}</div>
+      <div className="table-component-column-score">{stock.change}</div>
+      <div className="table-component-column-score">{stock.fundamental}</div>
+      <div className="table-component-column-score">{stock.technical}</div>
+      <div className="table-component-column-score">{stock.sentiment}</div>
+      <div className="table-component-column-score">{stock.risk}</div>
+    </div>
+  );
 
   return (
     <>
@@ -125,7 +167,13 @@ const TableComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="table-component-body"></div>
+                <div className="table-component-body">
+                  {loading ? (
+                    <div>Loading...</div>
+                  ) : (
+                    stocks.map((stock) => renderStockRow(stock))
+                  )}
+                </div>
               </div>
             </div>
           </div>
