@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import tableComponentStyles from "./TableComponentStyles";
+import tableComponentStyles, {
+  dropdownCSS,
+  homeTable,
+} from "./TableComponentStyles";
 import portfolioStyles from "../Portfolio/PortfolioStyles";
 import useStocks from "../../hooks/useStocks/useStocks";
 
@@ -43,7 +46,7 @@ const TableComponent = () => {
     {
       id: "3",
       name: "Country",
-      class: "country",
+      class: "country-desktop",
       tooltipText: "Country where the headquarters are located",
     },
     {
@@ -89,35 +92,23 @@ const TableComponent = () => {
     },
   ];
 
-  const renderStockRow = (stock) => (
-    <div key={stock.id} className="table-component-row justify-between">
-      <div className="table-component-column-rank">{stock.id}</div>
-      <div className="table-component-column-company">{stock.company}</div>
-      <div className="table-component-column-country">{stock.country}</div>
-      <div className="table-component-column-score">
-        {stock.score?.general?.value || "-"}
-      </div>
-      <div className="table-component-column-score">
-        {stock.score?.general?.change || "-"}
-      </div>
-      <div className="table-component-column-score">
-        {stock.score?.fundamental?.value || "-"}
-      </div>
-      <div className="table-component-column-score">
-        {stock.score?.technical?.value || "-"}
-      </div>
-      <div className="table-component-column-score">
-        {stock.score?.sentiment?.value || "-"}
-      </div>
-      <div className="table-component-column-score">
-        {stock.score?.risk?.value || "-"}
-      </div>
-    </div>
-  );
+  const getCountryCode = (alpha2) => {
+    const countryCodes = new Map([
+      ["US", "840"],
+      ["CA", "124"],
+    ]);
+
+    return countryCodes.get(alpha2) || alpha2;
+  };
+
+  const getCountryAlpha2 = (countryName) => {
+    if (!countryName) return "--";
+    return countryName.substring(0, 2).toUpperCase();
+  };
 
   return (
     <>
-      <div>
+      <div name="table-component-content">
         <div className="table-component-container table-component-footer-border-radius">
           <div className="table-component-content-wrapper">
             <span className="table-component-alpha-col-dropdown-mobile"></span>
@@ -125,7 +116,7 @@ const TableComponent = () => {
               <div className="table-component-shadow-background"></div>
               <div className="table-container table-component-with-alpha-column">
                 <div className="table-component-header">
-                  <div className="table-component-with-alpha-column table-component-row justify-between">
+                  <div className="table-component-with-alpha-column table-component-row">
                     {headers.map((header) =>
                       header.class !== "scoretable" ? (
                         <div
@@ -173,6 +164,7 @@ const TableComponent = () => {
                           />
                         </div>
                       </span>
+                      <span className="table-component-alpha-col-dropdown-desktop"></span>
                     </div>
                     <div className="table-component-column-country-mobile table-component-data-head">
                       <span>Country</span>
@@ -183,7 +175,190 @@ const TableComponent = () => {
                   {loading ? (
                     <div>Loading...</div>
                   ) : (
-                    stocks.map((stock) => renderStockRow(stock))
+                    stocks.map((stock) => (
+                      <div key={stock.id} className="table-component-row">
+                        <div className="table-component-column-rank table-component-data">
+                          <img
+                            src="https://cdn.danelfin.com/assets/next/images/icons/upArrowWhite.svg"
+                            alt="arrow icon"
+                            className="undefined filter-up-active"
+                          />
+                          <span>{stock.id}</span>
+                        </div>
+                        <div className="table-component-column-company table-component-data">
+                          <div className="table-component-company-colum">
+                            <span>
+                              <a
+                                title={`${stock.name} Stock Price`}
+                                href={`/stock/${stock.name}`}
+                                className="tooltipCustomImageStockList"
+                              >
+                                {stock.name}
+                                <img
+                                  src={`https://charts2.finviz.com/chart.ashx?s=m&t=${stock.name}`}
+                                  alt="graphic"
+                                  className="tooltiptextCustomStockList"
+                                />
+                              </a>
+                            </span>
+                            <span className="table-component-company-name">
+                              {stock.company}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="table-component-column-country-desktop table-component-data">
+                          <span className="tooltipCustomStockList">
+                            <a
+                              title="US Market Stocks | AI scores, stock prices, forecasts, analysis | Danelfin"
+                              href={`/us-stocks/0/0/0/${getCountryCode(
+                                stock.country
+                              )}/0/0/1`}
+                            >
+                              <span>
+                                <img
+                                  src={`https://cdn.danelfin.com/assets/images/flags/svg/${getCountryAlpha2(
+                                    stock.country
+                                  )}.svg`}
+                                  alt={`${stock.name} flag`}
+                                  className="flag-border"
+                                />
+                                <span className="tooltiptextCustomStockList">
+                                  {stock.country}
+                                </span>
+                              </span>
+                            </a>
+                          </span>
+                        </div>
+                        <div className="table-component-column-score  table-component-column-score-small table-component-data">
+                          <span className="d-flex-all-center table-component-doughnuts">
+                            <div
+                              className="doughnut-component-container tooltipCustomStockList undefined"
+                              style={{
+                                width: "31px",
+                                height: "31px",
+                              }}
+                            >
+                              <span className="tooltiptextCustomStockList">
+                                AI Score (from 1 to 10) based on the probability
+                                of beating the market in 3 months (51.98%) vs
+                                the average probability (35.40%) of all stocks.
+                                The "market" is the S&P 500 for US stocks and
+                                the STOXX 600 for European stocks.
+                              </span>
+                              <img
+                                src={`https://cdn.danelfin.com/assets/next/images/donutScores/${
+                                  stock.score?.general?.value || "-"
+                                }.svg?v=1`}
+                                alt="ai score"
+                                style={{
+                                  width: "31px",
+                                  height: "31px",
+                                }}
+                              />
+                            </div>
+                          </span>
+                        </div>
+                        <div className="table-component-column-change table-component-data">
+                          <span>
+                            <img
+                              width={13}
+                              height={10}
+                              loading="lazy"
+                              className="arrow-icon"
+                              src="https://cdn.danelfin.com/assets/next/images/icons/orangeArrow.svg"
+                              alt="arrow-icon"
+                            />
+                            {stock.score?.general?.change || "-"}
+                          </span>
+                        </div>
+                        <div className="table-component-column-fundamental table-component-data">
+                          <span>
+                            <img
+                              src={`https://cdn.danelfin.com/assets/next/images/donutScores/${
+                                stock.score?.fundamental?.value || "-"
+                              }.svg?v=1`}
+                              alt="ai score"
+                              style={{
+                                width: "31px",
+                                height: "31px",
+                              }}
+                            />
+                          </span>
+                        </div>
+                        <div className="table-component-column-technical table-component-data">
+                          <span>
+                            <img
+                              src={`https://cdn.danelfin.com/assets/next/images/donutScores/${
+                                stock.score?.technical?.value || "-"
+                              }.svg?v=1`}
+                              alt="ai score"
+                              style={{
+                                width: "31px",
+                                height: "31px",
+                              }}
+                            />
+                          </span>
+                        </div>
+                        <div className="table-component-column-sentiment table-component-data">
+                          <span>
+                            <img
+                              src={`https://cdn.danelfin.com/assets/next/images/donutScores/${
+                                stock.score?.sentiment?.value || "-"
+                              }.svg?v=1`}
+                              alt="ai score"
+                              style={{
+                                width: "31px",
+                                height: "31px",
+                              }}
+                            />
+                          </span>
+                        </div>
+                        <div className="table-component-column-risk table-component-data">
+                          <span>
+                            <img
+                              src={`https://cdn.danelfin.com/assets/next/images/donutScores/${
+                                stock.score?.risk?.value || "-"
+                              }.svg?v=1`}
+                              alt="ai score"
+                              style={{
+                                width: "31px",
+                                height: "31px",
+                              }}
+                            />
+                          </span>
+                        </div>
+                        <div className="table-component-alpha-col table-component-data">
+                          <span
+                            className={`table-component-alpha-col-content ${
+                              stock.perfYear >= 0 ? "positive" : "negative"
+                            }`}
+                          >
+                            {stock.perfYear || "-"}%
+                          </span>
+                        </div>
+                        <div className="table-component-column-country-mobile table-component-data">
+                          <a
+                            title="US Market Stocks | AI scores, stock prices, forecasts, analysis | Danelfin"
+                            href={`/us-stocks/0/0/0/${getCountryCode(
+                              stock.country
+                            )}/0/0/1`}
+                          >
+                            <span>
+                              <img
+                                src={`https://cdn.danelfin.com/assets/images/flags/svg/${getCountryAlpha2(
+                                  stock.country
+                                )}.svg`}
+                                alt={`${stock.name} flag`}
+                                className="flag-border"
+                              />
+                              <span className="tooltiptextCustomStockList">
+                                {stock.country}
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    ))
                   )}
                 </div>
               </div>
@@ -193,6 +368,8 @@ const TableComponent = () => {
       </div>
       <style jsx>{tableComponentStyles}</style>
       <style jsx>{portfolioStyles}</style>
+      <style jsx>{dropdownCSS}</style>
+      <style jsx>{homeTable}</style>
     </>
   );
 };

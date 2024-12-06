@@ -30,13 +30,15 @@ const Home = (props) => {
             />
             <span>{`${getFormattedDate()}. For next months.`}</span>
           </div>
-          <HomeTables
-            t={t}
-            topStocksTable={props.topStocksTable}
-            isCompare={false}
-            topStocks={props.topStocks}
-            topEtfs={props.topEtfs}
-          />
+          <div className="tops-tables">
+            <HomeTables
+              t={t}
+              topStocksTable={props.topStocksTable}
+              isCompare={false}
+              topStocks={props.topStocks}
+              topEtfs={props.topEtfs}
+            />
+          </div>
         </div>
         <style jsx>{styles}</style>
       </div>
