@@ -14,7 +14,7 @@ const TableComponent = () => {
       try {
         const response = await getStocks({
           limit: 5,
-          order_by: "rank",
+          order_by: "id",
           order_dir: "asc",
         });
 
@@ -94,12 +94,24 @@ const TableComponent = () => {
       <div className="table-component-column-rank">{stock.id}</div>
       <div className="table-component-column-company">{stock.company}</div>
       <div className="table-component-column-country">{stock.country}</div>
-      <div className="table-component-column-score">{stock.shortName}</div>
-      <div className="table-component-column-score">{stock.change}</div>
-      <div className="table-component-column-score">{stock.fundamental}</div>
-      <div className="table-component-column-score">{stock.technical}</div>
-      <div className="table-component-column-score">{stock.sentiment}</div>
-      <div className="table-component-column-score">{stock.risk}</div>
+      <div className="table-component-column-score">
+        {stock.score?.general?.value || "-"}
+      </div>
+      <div className="table-component-column-score">
+        {stock.score?.general?.change || "-"}
+      </div>
+      <div className="table-component-column-score">
+        {stock.score?.fundamental?.value || "-"}
+      </div>
+      <div className="table-component-column-score">
+        {stock.score?.technical?.value || "-"}
+      </div>
+      <div className="table-component-column-score">
+        {stock.score?.sentiment?.value || "-"}
+      </div>
+      <div className="table-component-column-score">
+        {stock.score?.risk?.value || "-"}
+      </div>
     </div>
   );
 

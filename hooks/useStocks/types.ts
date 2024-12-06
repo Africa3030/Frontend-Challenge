@@ -22,5 +22,5 @@ export interface StocksResponse {
     | "isIn"
     | "isETF"
     | null;
-  order_dir: "asc" | "dsc";
+  order_dir: "asc" | "desc";
 }
