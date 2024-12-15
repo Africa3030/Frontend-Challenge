@@ -10,6 +10,7 @@ import NextRouterContextProvider from "@/context/next-router-context.tsx";
 import StyledJsxRegistry from "@/context/registry.tsx";
 import { useTranslation } from "@/src/app/i18n";
 import { headers } from "next/headers";
+
 const languages = ["en", "es"];
 
 export async function generateStaticParams() {
@@ -34,7 +35,12 @@ const imageSize = "small";
 const width = "260";
 const height = "258";
 
-// @ts-ignore
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  themeColor: "#233253",
+};
+
 export const metadata = {
   title: title,
   description: description,
@@ -42,8 +48,6 @@ export const metadata = {
   alternates: {
     canonical: canonical,
   },
-  viewport: "width=device-width, initial-scale=1.0",
-  themeColor: "#233253",
   openGraph: {
     siteName: title,
     title: title,
@@ -72,16 +76,12 @@ export const metadata = {
 };
 
 export default async function Root({ children, params: { lng } }: Props) {
-  const cdnUrl = process.env.NEXT_PUBLIC_CDN_URL;
   const headersList = headers();
   const host = headersList.get("host");
   const { t } = await useTranslation(lng, "common");
 
   return (
-    <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
+    <html lang={lng}>
       <body id="root">
         <NextRouterContextProvider value="app">
           <StyledJsxRegistry>
