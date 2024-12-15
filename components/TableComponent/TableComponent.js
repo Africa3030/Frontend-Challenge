@@ -10,6 +10,9 @@ const TableComponent = () => {
   const [stocks, setStocks] = useState([]);
   const [loading, setLoading] = useState(true);
   const { getStocks } = useStocks();
+  const [orderBy, setOrderBy] = useState("id");
+  const [orderDir, setOrderDir] = useState("asc");
+  const [activeColumn, setActiveColumn] = useState("rank");
 
   useEffect(() => {
     const fetchStocks = async () => {
@@ -17,8 +20,8 @@ const TableComponent = () => {
       try {
         const response = await getStocks({
           limit: 5,
-          order_by: "id",
-          order_dir: "asc",
+          order_by: orderBy,
+          order_dir: orderDir,
         });
 
         if (response && response.data) {
@@ -32,27 +35,36 @@ const TableComponent = () => {
     };
 
     fetchStocks();
-  }, [getStocks]);
+  }, [getStocks, orderBy, orderDir]);
 
   const headers = [
     {
       id: "1",
       name: "Rank",
       class: "rank",
+      field: "id",
       tooltipText:
         "Ranking based on AI Score, the lower the ranking, the better",
     },
-    { id: "2", name: "Company", class: "company", tooltipText: "Company name" },
+    {
+      id: "2",
+      name: "Company",
+      class: "company",
+      field: "name",
+      tooltipText: "Company name",
+    },
     {
       id: "3",
       name: "Country",
       class: "country-desktop",
+      field: "country",
       tooltipText: "Country where the headquarters are located",
     },
     {
       id: "4",
       name: "AI Score",
       class: "scoretable",
+      field: "score",
       tooltipText:
         "Danelfin AI global score based on all data available (1-10)",
     },
@@ -60,19 +72,22 @@ const TableComponent = () => {
       id: "5",
       name: "Change",
       class: "change",
+      field: "change",
       tooltipText: "Change in AI Score vs the previous day",
     },
     {
       id: "6",
       name: "Fundamental",
       class: "fundamental",
+      field: "fundamental",
       tooltipText:
         "Danelfin AI subscore only based on company fundamental indicators (1-10)",
     },
     {
       id: "7",
-      name: "Teachnical",
+      name: "Technical",
       class: "technical",
+      field: "technical",
       tooltipText:
         "Danelfin AI subscore only based on technical indicators produced by price & volume (1-10)",
     },
@@ -80,17 +95,29 @@ const TableComponent = () => {
       id: "8",
       name: "Sentiment",
       class: "sentiment",
+      field: "sentiment",
       tooltipText:
         "Danelfin AI subscore only based on sentiment indicators (1-10)",
     },
     {
       id: "9",
-      name: "Low Risc",
+      name: "Low Risk",
       class: "risk",
+      field: "risk",
       tooltipText:
-        "Risk subscore based on the negative price fluctuations (semi-deviation) latest 500 market days. The higher the score, the lower the downside risk.",
+        "Risk subscore based on the negative price fluctuations (semi-deviation) latest 500 market days.",
     },
   ];
+
+  const handleSort = (field, columnClass) => {
+    if (orderBy === field) {
+      setOrderDir(orderDir === "asc" ? "desc" : "asc");
+    } else {
+      setOrderBy(field);
+      setOrderDir("asc");
+    }
+    setActiveColumn(columnClass);
+  };
 
   const getCountryCode = (alpha2) => {
     const countryCodes = new Map([
@@ -122,6 +149,7 @@ const TableComponent = () => {
                         <div
                           key={header.id}
                           className={`table-component-column-${header.class} table-component-data-head tooltipCustomStockList tootipCustomStockLlistDoubleSize`}
+                          onClick={() => handleSort(header.field, header.class)}
                         >
                           <span>{header.name}</span>
                           <span className="tooltiptextCustomStockList">
@@ -132,6 +160,7 @@ const TableComponent = () => {
                         <div
                           key={header.id}
                           className={`table-component-column-score table-component-data-head tooltipCustomStockList tootipCustomStockLlistDoubleSize  table-component-column-score-small`}
+                          onClick={() => handleSort(header.field, header.class)}
                         >
                           <span>
                             <span>{header.name}</span>
@@ -175,14 +204,22 @@ const TableComponent = () => {
                   {loading ? (
                     <div>Loading...</div>
                   ) : (
-                    stocks.map((stock) => (
+                    stocks.map((stock, index) => (
                       <div key={stock.id} className="table-component-row">
                         <div className="table-component-column-rank table-component-data">
-                          <img
-                            src="https://cdn.danelfin.com/assets/next/images/icons/upArrowWhite.svg"
-                            alt="arrow icon"
-                            className="undefined filter-up-active"
-                          />
+                          {index === 0 && activeColumn === "rank" && (
+                            <img
+                              src={`https://cdn.danelfin.com/assets/next/images/icons/${
+                                orderDir === "asc"
+                                  ? "upArrowWhite"
+                                  : "downArrowGrey"
+                              }.svg`}
+                              alt={`Sort ${orderDir}`}
+                              className={`undefined filter-${
+                                orderDir === "asc" ? "up" : "down"
+                              }-active`}
+                            />
+                          )}
                           <span>{stock.id}</span>
                         </div>
                         <div className="table-component-column-company table-component-data">
