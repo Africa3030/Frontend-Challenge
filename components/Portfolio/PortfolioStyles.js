@@ -4,7 +4,7 @@ export default css`
   .portfolio-details-page-container {
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom:75px;
+    margin-bottom: 75px;
   }
 
   .portfolio-page-content-wrapper {
@@ -18,20 +18,22 @@ export default css`
     text-align: right;
   }
 
-  ${'' /* .save-btn-new-portfolio {
+  ${
+    "" /* .save-btn-new-portfolio {
     display: flex;
     justify-conten: center;
     align-items: center;
     position: relative;
-  } */}
+  } */
+  }
 
   .save-btn-new-portfolio {
     position: relative;
   }
-  
+
   .save-btn-new-portfolio-spinner-button {
     display: flex;
-    justify-conten: space-between;
+    justify-content: space-between;
     margin: 0 auto;
   }
 
@@ -171,16 +173,13 @@ export default css`
     height: 25px;
   }
 
-
-.portfolio-details-modal-body-wrapper {
-  height: 100%;
-}
+  .portfolio-details-modal-body-wrapper {
+    height: 100%;
+  }
 
   .portfolio-market-radio-buttons-items label {
     text-align-last: left;
   }
-
-  
 
   .portfolio-form-group label,
   .portfolio-market-radio-buttons-title {
@@ -559,7 +558,6 @@ export default css`
       max-width: 80px;
     }
 
-
     .portfolio-external-sources-buttons button {
       height: 45px;
       width: 30%;
@@ -749,7 +747,9 @@ export default css`
     }
 
     .portfolio-form-group
-      + .portfolio-form-group:not(.portfolio-form-group.portfolio-tickers-chosen) {
+      + .portfolio-form-group:not(
+        .portfolio-form-group.portfolio-tickers-chosen
+      ) {
       margin-top: 23.5px;
     }
 
@@ -922,9 +922,9 @@ export const portfolioPageStyles = css`
   }
 
   .portfolio-details-page-container .sec-ind-header-container {
-    border-top-right-radius:8px;
+    border-top-right-radius: 8px;
     border: 1px solid var(--clr-border);
-    border-bottom:0px;
+    border-bottom: 0px;
     padding: 27px 30px 25px;
     height: auto;
   }
@@ -938,19 +938,18 @@ export const portfolioPageStyles = css`
     border-bottom: 1px solid var(--clr-border);
     padding: 0 20px 0 30px;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
   }
 
-  .portfolio-table-total-companies-info{
-    display:flex;
-    flex-direction:column;
+  .portfolio-table-total-companies-info {
+    display: flex;
+    flex-direction: column;
     line-height: 18px;
   }
 
-  .portfolio-table-total-companies-info span{
-    width:100%;
+  .portfolio-table-total-companies-info span {
+    width: 100%;
   }
-  
 
   .portfolio-table-total-companies div {
     font-size: 12px;
@@ -989,7 +988,6 @@ export const portfolioPageStyles = css`
     margin-bottom: 7px;
   }
 
-
   .dropdown-protfolio-list-visible {
     display: flex;
     position: absolute;
@@ -1007,9 +1005,11 @@ export const portfolioPageStyles = css`
     z-index: 100;
   }
 
-  ${'' /* .sec-ind-titles-container {
+  ${
+    "" /* .sec-ind-titles-container {
     position: relative;
-  } */}
+  } */
+  }
 
   .sec-ind-titles-container {
     display: flex;
@@ -1086,7 +1086,7 @@ export const portfolioPageStyles = css`
   .portfolio-edit-button:hover {
     text-decoration: underline;
   }
-  
+
   .portfolio-details-page-container .sec-ind-header-title img {
     width: 10px;
     height: 20px;
@@ -1133,23 +1133,22 @@ export const portfolioPageStyles = css`
     margin-top: 4px;
   }
 
-  
-  .portfolioCount{
+  .portfolioCount {
     font-family: var(--ff-primary);
     line-height: 14px;
     font-size: 14px;
     margin-bottom: 24px;
   }
 
-  .maxPortfolio{
+  .maxPortfolio {
     color: var(--clr-orange);
   }
 
-  .maxPortfolio:hover{
+  .maxPortfolio:hover {
     text-decoration: underline;
   }
 
-  .pointercursor{
+  .pointercursor {
     cursor: pointer;
   }
 
@@ -1229,12 +1228,12 @@ export const portfolioPageStyles = css`
   }
 
   .portfolio-details-buttons-desktop {
-    display:block;
-    align-items:center;
-    justify-content:center;
-    margin-left:37px;
-    margin-top:auto;
-    margin-bottom:auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 37px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .portfolio-detaills-mobile-title {
@@ -1286,7 +1285,7 @@ export const portfolioPageStyles = css`
     margin: 10px auto;
     max-width: 325px;
     line-height: 24px;
-    margin-top:20px;
+    margin-top: 20px;
   }
 
   .my-portfolios-add-stocks-popup-delete {
@@ -1421,7 +1420,6 @@ export const portfolioPageStyles = css`
     cursor: pointer;
   }
 
-
   /* columns alignment */
 
   .portfolio-details-page-container .industry-title,
@@ -1430,17 +1428,12 @@ export const portfolioPageStyles = css`
   }
   /* / columns alignment */
 
-
-
   .portfolio-tickers-chosen-item-new {
     background-color: var(--clr-chosenItems);
   }
 
   .portfolio-details-last-update-mobile {
-    
   }
-
-
 
   @media (max-width: 968px) {
     .portfolio-details-page-container .sec-ind-big-donut-section {
@@ -1454,7 +1447,7 @@ export const portfolioPageStyles = css`
       height: auto;
     }
 
-    .portfolio-table-total-companies-info{
+    .portfolio-table-total-companies-info {
       width: 185px;
     }
 
@@ -1462,7 +1455,6 @@ export const portfolioPageStyles = css`
       height: auto;
       padding: 12px 14px;
     }
-    
   }
 
   @media (min-width: 1000px) and (max-width: 1100px) {
@@ -1485,8 +1477,6 @@ export const portfolioPageStyles = css`
   }
 
   @media (max-width: 1070px) {
-
-
     .portfolio-details-page-container .sec-ind-table-content-wrapper {
       margin-bottom: 19px;
     }
@@ -1579,7 +1569,7 @@ export const portfolioPageStyles = css`
       font-size: 12px;
       line-height: 18px;
       height: 70px;
-      padding-right:10px;
+      padding-right: 10px;
     }
 
     .portfolio-details-button-item {
@@ -1689,7 +1679,7 @@ export const portfolioPageStyles = css`
     }
 
     .portfolio-details-modal-delete-section {
-      margin-top:30px;
+      margin-top: 30px;
     }
 
     .portfolio-table-container .table-component-column-company div,
@@ -1734,7 +1724,7 @@ export const portfolioPageStyles = css`
       background-color: var(--clr-light);
     }
 
-    .portfolio-details-page-container{
+    .portfolio-details-page-container {
       margin-bottom: 50px;
     }
 
@@ -1751,8 +1741,6 @@ export const portfolioPageStyles = css`
     .portfolio-table-total-companies div {
       font-size: 10px;
     }
-
-
   }
 
   @media (max-width: 374px) {
@@ -1893,10 +1881,10 @@ export const topPageDonutStyes = css`
     border-left: 1px solid var(--clr-border);
     padding: 20px 0 20px 15px;
   }
-  
+
   .sec-ind-small-donuts-side-mobile {
-      display: none;
-    }
+    display: none;
+  }
 
   .sec-ind-scores-text-small-donuts {
     font-size: 14px;
@@ -1965,16 +1953,18 @@ export const topPageDonutStyes = css`
     transition: opacity 0.15s linear;
   }
 
-  
-  .portfolio-details-page-container .tooltipCustom-sec-ind.tooltipCustomDiversityScores .tooltiptextCustom-sec-ind {
+  .portfolio-details-page-container
+    .tooltipCustom-sec-ind.tooltipCustomDiversityScores
+    .tooltiptextCustom-sec-ind {
     width: 468px;
     left: initial;
     right: calc(-30px - 15px);
   }
 
-  .tooltipCustom-sec-ind.tooltipCustomDiversityScores .tooltiptextCustom-sec-ind::after {
+  .tooltipCustom-sec-ind.tooltipCustomDiversityScores
+    .tooltiptextCustom-sec-ind::after {
     left: initial;
-    right: calc(30px + 15px + 55px);;
+    right: calc(30px + 15px + 55px);
     margin-left: -5px;
   }
 
@@ -2035,13 +2025,15 @@ export const topPageDonutStyes = css`
     .sec-ind-small-donuts-side-desktop {
       display: none;
     }
-    
+
     .sec-ind-small-donuts-side-mobile {
       display: flex;
       margin-top: 18px;
     }
 
-    .sec-ind-small-donuts-side:not(.sec-ind-small-donuts-side-mobile .sec-ind-small-donuts-side) {
+    .sec-ind-small-donuts-side:not(
+        .sec-ind-small-donuts-side-mobile .sec-ind-small-donuts-side
+      ) {
       height: 141px;
       display: flex;
       flex-direction: column;
@@ -2053,10 +2045,14 @@ export const topPageDonutStyes = css`
       width: 30px;
     }
 
-    .sec-ind-small-donuts-side:not(.sec-ind-small-donuts-side-mobile .sec-ind-small-donuts-side) .sec-ind-scores-item + .sec-ind-scores-item {
+    .sec-ind-small-donuts-side:not(
+        .sec-ind-small-donuts-side-mobile .sec-ind-small-donuts-side
+      )
+      .sec-ind-scores-item
+      + .sec-ind-scores-item {
       margin-top: 12px;
     }
-    
+
     .sec-ind-scores-item + .sec-ind-scores-item {
       margin-left: 0;
       margin-top: 0;
@@ -2065,7 +2061,9 @@ export const topPageDonutStyes = css`
       line-height: 16px;
     }
 
-    .sec-ind-small-donuts-side-mobile .sec-ind-scores-item .sec-ind-scores-text-small-donuts {
+    .sec-ind-small-donuts-side-mobile
+      .sec-ind-scores-item
+      .sec-ind-scores-text-small-donuts {
       max-width: 57px;
     }
 
@@ -2115,7 +2113,9 @@ export const topPageDonutStyes = css`
     }
 
     .tooltipCustom-sec-ind .tooltiptextCustom-sec-ind,
-    .portfolio-details-page-container .tooltipCustom-sec-ind.tooltipCustomDiversityScores .tooltiptextCustom-sec-ind {
+    .portfolio-details-page-container
+      .tooltipCustom-sec-ind.tooltipCustomDiversityScores
+      .tooltiptextCustom-sec-ind {
       left: 50%;
       margin-left: -55px;
       font-size: 11px;
@@ -2129,13 +2129,17 @@ export const topPageDonutStyes = css`
     }
 
     .tooltipCustom-sec-ind .tooltiptextCustom-sec-ind::after,
-    .portfolio-details-page-container .tooltipCustom-sec-ind.tooltipCustomDiversityScores .tooltiptextCustom-sec-ind::after {
+    .portfolio-details-page-container
+      .tooltipCustom-sec-ind.tooltipCustomDiversityScores
+      .tooltiptextCustom-sec-ind::after {
       left: 10%;
       margin-left: -7px;
       right: initial;
     }
 
-    .sec-ind-small-donuts-side:last-child .tooltipCustom-sec-ind .tooltiptextCustom-sec-ind::after {
+    .sec-ind-small-donuts-side:last-child
+      .tooltipCustom-sec-ind
+      .tooltiptextCustom-sec-ind::after {
       margin-left: 5px;
     }
 
@@ -2144,30 +2148,43 @@ export const topPageDonutStyes = css`
 `;
 
 export const alphaColumnStyles = css.global`
-.portfolio-table-container .table-component-with-alpha-column .table-component-company-column,
-.portfolio-table-container .table-component-with-alpha-column th.table-component-column-company {
-  min-width: 196px;
-  max-width: 196px;
-  width: 196px;
-}
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-company-column,
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    th.table-component-column-company {
+    min-width: 196px;
+    max-width: 196px;
+    width: 196px;
+  }
 
-.portfolio-table-container .table-component-with-alpha-column .table-component-company-column,
- .table-component-with-alpha-column .table-component-column-company{
-  min-width: 232px;
-  width: 232px;
-  max-width: 232px;
-}
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-company-column,
+  .table-component-with-alpha-column .table-component-column-company {
+    min-width: 232px;
+    width: 232px;
+    max-width: 232px;
+  }
 
-.portfolio-table-container .table-component-with-alpha-column .table-component-company-colum {
-  padding-left: 30px;
-}
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-company-colum {
+    padding-left: 30px;
+  }
 
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-country-desktop,
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-country-mobile {
-  width: 82px;
-}
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-country-desktop,
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-country-mobile {
+    width: 82px;
+  }
 
-.portfolio-table-container .table-component-content
+  .portfolio-table-container
+    .table-component-content
     .table-component-with-alpha-column
     .table-component-doughnuts {
     width: 80px;
@@ -2175,48 +2192,76 @@ export const alphaColumnStyles = css.global`
     max-width: 80px;
   }
 
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-change,
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-risk {
-  width: 81px;
-}
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-technical,
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-fundamental,
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-sentiment {
-  width: 86px;
-}
-
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-sector,
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-industry  {
-  width: 138px;
-  max-width: 161px;
-  min-width: 161px;
-}
-
-.portfolio-table-container .table-component-content .table-component-with-alpha-column  td.table-component-column-industry, 
-.portfolio-table-container .table-component-content .table-component-with-alpha-column td.table-component-column-sector {
-  padding-left: 4px;
-}
-
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-gain  {
-  width: 69px;
-  max-width: 69px;
-  min-width: 69px;
-}
-
-.portfolio-table-container .table-component-with-alpha-column .table-component-column-trash {
-  width: 63px;
-}
-
-@media (max-width: 968px) {
-  /* columns sizing with the alpha extra column */
-  .portfolio-table-container .table-component-with-alpha-column .table-component-company-column,
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-company {
-    min-width: 151px;
-    width: 151px;
-    max-width: 151px;
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-change,
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-risk {
+    width: 81px;
+  }
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-technical,
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-fundamental,
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-sentiment {
+    width: 86px;
   }
 
-  /* TODO: remove this when Orlando says if he wants the new table alignment or not
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-sector,
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-industry {
+    width: 138px;
+    max-width: 161px;
+    min-width: 161px;
+  }
+
+  .portfolio-table-container
+    .table-component-content
+    .table-component-with-alpha-column
+    td.table-component-column-industry,
+  .portfolio-table-container
+    .table-component-content
+    .table-component-with-alpha-column
+    td.table-component-column-sector {
+    padding-left: 4px;
+  }
+
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-gain {
+    width: 69px;
+    max-width: 69px;
+    min-width: 69px;
+  }
+
+  .portfolio-table-container
+    .table-component-with-alpha-column
+    .table-component-column-trash {
+    width: 63px;
+  }
+
+  @media (max-width: 968px) {
+    /* columns sizing with the alpha extra column */
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-company-column,
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-company {
+      min-width: 151px;
+      width: 151px;
+      max-width: 151px;
+    }
+
+    /* TODO: remove this when Orlando says if he wants the new table alignment or not
   .portfolio-table-container .table-component-shadow-background {
     left: 150px;
   }
@@ -2233,65 +2278,99 @@ export const alphaColumnStyles = css.global`
     overflow: hidden;
   }
   */
-  
-  .portfolio-table-container .table-component-with-alpha-column .table-component-company-colum {
-    padding-left: 10px;
-  }
-  
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-country-desktop,
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-country-mobile,
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-trash {
-    width: 62px;
-  }
-  
-  .portfolio-table-container .table-component-with-alpha-column .table-component-data-head.table-component-column-score, 
-  .portfolio-table-container .table-component-with-alpha-column .table-component-data.table-component-column-score,
-  .portfolio-table-container .table-component-content .table-component-with-alpha-column .table-component-doughnuts {
-    width: 246px;
-    min-width: 246px;
-    max-width: 246px;
-  }
-  
-  .portfolio-table-container .table-component-content
+
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-company-colum {
+      padding-left: 10px;
+    }
+
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-country-desktop,
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-country-mobile,
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-trash {
+      width: 62px;
+    }
+
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-data-head.table-component-column-score,
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-data.table-component-column-score,
+    .portfolio-table-container
+      .table-component-content
+      .table-component-with-alpha-column
+      .table-component-doughnuts {
+      width: 246px;
+      min-width: 246px;
+      max-width: 246px;
+    }
+
+    .portfolio-table-container
+      .table-component-content
       .table-component-with-alpha-column
       .table-component-doughnuts {
       width: 94px;
       min-width: 94px;
       max-width: 94px;
     }
-  
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-score {
-    padding-left: 151px !important;
-  }
-  
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-technical,
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-sentiment,
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-change,
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-risk {
-    width: 72px;
-  }
-  
-  .table-component-with-alpha-column .table-component-column-fundamental {
-    width: 82px;
-  }
-  
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-sector,
-  .portfolio-table-container .table-component-with-alpha-column .table-component-column-industry  {
-    width: 135px;
-    max-width: 135px;
-    min-width: 135px;
-  }
-  
-  .portfolio-table-container .table-component-content .table-component-with-alpha-column  td.table-component-column-industry, 
-  .portfolio-table-container .table-component-content .table-component-with-alpha-column td.table-component-column-sector {
-    padding-left: 7px;
-  }
-  
-  /* / columns sizing with the alpha extra column */
-}
-`
 
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-score {
+      padding-left: 151px !important;
+    }
 
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-technical,
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-sentiment,
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-change,
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-risk {
+      width: 72px;
+    }
+
+    .table-component-with-alpha-column .table-component-column-fundamental {
+      width: 82px;
+    }
+
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-sector,
+    .portfolio-table-container
+      .table-component-with-alpha-column
+      .table-component-column-industry {
+      width: 135px;
+      max-width: 135px;
+      min-width: 135px;
+    }
+
+    .portfolio-table-container
+      .table-component-content
+      .table-component-with-alpha-column
+      td.table-component-column-industry,
+    .portfolio-table-container
+      .table-component-content
+      .table-component-with-alpha-column
+      td.table-component-column-sector {
+      padding-left: 7px;
+    }
+
+    /* / columns sizing with the alpha extra column */
+  }
+`;
 
 export const editPortfolioStyles = css.global`
   .my-portfolios-edit-stocks-popup-container.auth-modal {
@@ -2470,7 +2549,6 @@ export const deletePortfolioModalStyles = css.global`
   }
 
   @media (max-width: 769px) {
-
     .portfolio-details-last-update-mobile {
       display: flex;
     }
@@ -2484,10 +2562,11 @@ export const deletePortfolioModalStyles = css.global`
       padding-bottom: 0;
     }
 
-    .portfolio-details-last-update-mobile .stock-market-filter-new-markets-container {
+    .portfolio-details-last-update-mobile
+      .stock-market-filter-new-markets-container {
       display: none;
     }
-    
+
     .breadcrumbs-my-portfolios,
     .market-filter-my-portfolios {
       display: none;
@@ -2531,18 +2610,17 @@ export const deletePortfolioModalStyles = css.global`
 `;
 
 export const borderBottoStyles = css.global`
-.portfolio-table-container .table-component-footer-container {
-  border-bottom: 1px solid var(--clr-border);
-  border-right: 2px solid var(--clr-border);
-  border-left: 2px solid var(--clr-border);
-  border-spacing: 0px;
-  border-collapse: collapse;
-}
-
-@media (max-width: 1070px) {
   .portfolio-table-container .table-component-footer-container {
-    border-bottom: 2px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+    border-right: 2px solid var(--clr-border);
+    border-left: 2px solid var(--clr-border);
+    border-spacing: 0px;
+    border-collapse: collapse;
   }
-}
 
-`
+  @media (max-width: 1070px) {
+    .portfolio-table-container .table-component-footer-container {
+      border-bottom: 2px solid var(--clr-border);
+    }
+  }
+`;
