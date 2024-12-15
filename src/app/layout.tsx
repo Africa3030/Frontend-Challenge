@@ -5,8 +5,8 @@ import ImportBsJS from "@/context/importBsJS";
 import "@/styles/globals.css";
 import React from "react";
 import Layout from "@/src/Shared/Infrastructure/Components/PageLayout";
-import NextRouterContextProvider from "@/context/next-router-context.tsx";
-import StyledJsxRegistry from "@/context/registry.tsx";
+import NextRouterContextProvider from "@/context/next-router-context";
+import StyledJsxRegistry from "@/context/registry";
 import { useTranslation } from "@/src/app/i18n";
 import { headers } from "next/headers";
 
