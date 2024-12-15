@@ -1,8 +1,7 @@
-import { ReactNode, Suspense } from "react";
+import { ReactNode } from "react";
 import { NavigationEvents } from "@/context/navigation-events";
 import { type Locale } from "@/i18n-config";
 import ImportBsJS from "@/context/importBsJS";
-import "bootstrap/dist/css/bootstrap.css";
 import "@/styles/globals.css";
 import React from "react";
 import Layout from "@/src/Shared/Infrastructure/Components/PageLayout";

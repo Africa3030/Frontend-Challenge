@@ -11,7 +11,6 @@ import {
   mobilePopUp,
   dataTableGeneric,
 } from "@/styles/global";
-import "bootstrap/dist/css/bootstrap.css";
 import Header from "../../../components/Header/Header";
 
 const Layout = ({ children }) => {
