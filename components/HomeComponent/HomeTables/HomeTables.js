@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { useTranslation } from "next-i18next";
 import HomeTablesNav from "./HomeTablesNav/HomeTablesNav";
 import styles from "./HomeTablesStyles";
 import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 import TableComponent from "../../TableComponent/TableComponent";
 import { FILTERS_MAP } from "@/src/Tickers/Domain/Filter";
 
-const HomeTables = ({ t, topStocksTable, isCompare, topStocks, topEtfs }) => {
+const HomeTables = ({ topStocksTable, isCompare, topStocks, topEtfs }) => {
+  const { t } = useTranslation("common");
   const [topStocksActive, setTopStocksActive] = useState(true);
   const [topEtfsActive, setTopEtfsActive] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -24,9 +26,7 @@ const HomeTables = ({ t, topStocksTable, isCompare, topStocks, topEtfs }) => {
               {t("comparePage.bestStocks.usdescription2")}
             </p>
           </>
-        ) : (
-          <></>
-        )}
+        ) : null}
         <HomeTablesNav
           setTopEtfsActive={setTopEtfsActive}
           setTopStocksActive={setTopStocksActive}
@@ -51,7 +51,7 @@ const HomeTables = ({ t, topStocksTable, isCompare, topStocks, topEtfs }) => {
 
         <TableComponent />
 
-        {loading ? <LoadingSpinner /> : <></>}
+        {loading && <LoadingSpinner />}
       </div>
       <style jsx>{styles}</style>
     </>
