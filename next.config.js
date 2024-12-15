@@ -1,33 +1,35 @@
-const { i18n } = require('./next-i18next.config');
-
-const securityHeaders = [
-  {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN'
-  }
-]
-
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   async headers() {
     return [
       {
-        // Apply these headers to all routes in your application.
-        source: '/:path*',
-        headers: securityHeaders,
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+        ],
       },
-    ]
+    ];
   },
   trailingSlash: false,
-
-  i18n,
   images: {
-    domains: [
-      process.env.PUBLIC_URL,
-      'localhost',
-      'cdn1.danelfin.com',
-      'next.danelfin.com'
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn1.danelfin.com",
+      },
+      {
+        protocol: "https",
+        hostname: "next.danelfin.com",
+      },
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
     ],
-    loader: 'default',
-    path: process.env.PUBLIC_URL,
-  }
-}
+  },
+};
+
+module.exports = nextConfig;
