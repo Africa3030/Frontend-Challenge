@@ -4,9 +4,8 @@ import HomeTablesNav from "./HomeTablesNav/HomeTablesNav";
 import styles from "./HomeTablesStyles";
 import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 import TableComponent from "../../TableComponent/TableComponent";
-import { FILTERS_MAP } from "@/src/Tickers/Domain/Filter";
 
-const HomeTables = ({ topStocksTable, isCompare, topStocks, topEtfs }) => {
+const HomeTables = ({ topStocksTable, isCompare, topStocks }) => {
   const { t } = useTranslation("common");
   const [topStocksActive, setTopStocksActive] = useState(true);
   const [topEtfsActive, setTopEtfsActive] = useState(false);
@@ -49,7 +48,7 @@ const HomeTables = ({ topStocksTable, isCompare, topStocks, topEtfs }) => {
           </p>
         </div>
 
-        <TableComponent />
+        <TableComponent topStocks={topStocks} />
 
         {loading && <LoadingSpinner />}
       </div>

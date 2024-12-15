@@ -12,7 +12,7 @@ function getFormattedDate() {
   });
 }
 
-export default function HomeClient({ topStocks, topEtfs, botStatus }) {
+export default function HomeClient({ topStocks, botStatus }) {
   const { t } = useTranslation("common");
 
   return (
@@ -35,7 +35,6 @@ export default function HomeClient({ topStocks, topEtfs, botStatus }) {
               topStocksTable={null}
               isCompare={false}
               topStocks={topStocks}
-              topEtfs={topEtfs}
             />
           </div>
         </div>

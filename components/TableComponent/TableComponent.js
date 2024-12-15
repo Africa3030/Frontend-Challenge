@@ -1,41 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import tableComponentStyles, {
   dropdownCSS,
   homeTable,
 } from "./TableComponentStyles";
 import portfolioStyles from "../Portfolio/PortfolioStyles";
-import useStocks from "../../hooks/useStocks/useStocks";
 
-const TableComponent = () => {
-  const [stocks, setStocks] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const { getStocks } = useStocks();
-  const [orderBy, setOrderBy] = useState("id");
-  const [orderDir, setOrderDir] = useState("asc");
+const TableComponent = ({ topStocks }) => {
   const [activeColumn, setActiveColumn] = useState("rank");
-
-  useEffect(() => {
-    const fetchStocks = async () => {
-      setLoading(true);
-      try {
-        const response = await getStocks({
-          limit: 5,
-          order_by: orderBy,
-          order_dir: orderDir,
-        });
-
-        if (response && response.data) {
-          setStocks(response.data);
-        }
-      } catch (error) {
-        console.error("Error fetching stocks:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchStocks();
-  }, [getStocks, orderBy, orderDir]);
 
   const headers = [
     {
@@ -108,16 +79,6 @@ const TableComponent = () => {
         "Risk subscore based on the negative price fluctuations (semi-deviation) latest 500 market days.",
     },
   ];
-
-  const handleSort = (field, columnClass) => {
-    if (orderBy === field) {
-      setOrderDir(orderDir === "asc" ? "desc" : "asc");
-    } else {
-      setOrderBy(field);
-      setOrderDir("asc");
-    }
-    setActiveColumn(columnClass);
-  };
 
   const getCountryCode = (alpha2) => {
     const countryCodes = new Map([
@@ -201,23 +162,17 @@ const TableComponent = () => {
                   </div>
                 </div>
                 <div className="table-component-body">
-                  {loading ? (
+                  {!topStocks ? (
                     <div>Loading...</div>
                   ) : (
-                    stocks.map((stock, index) => (
+                    topStocks.map((stock, index) => (
                       <div key={stock.id} className="table-component-row">
                         <div className="table-component-column-rank table-component-data">
                           {index === 0 && activeColumn === "rank" && (
                             <img
-                              src={`https://cdn.danelfin.com/assets/next/images/icons/${
-                                orderDir === "asc"
-                                  ? "upArrowWhite"
-                                  : "downArrowGrey"
-                              }.svg`}
-                              alt={`Sort ${orderDir}`}
-                              className={`undefined filter-${
-                                orderDir === "asc" ? "up" : "down"
-                              }-active`}
+                              src="https://cdn.danelfin.com/assets/next/images/icons/upArrowWhite.svg"
+                              alt="Sort asc"
+                              className="undefined filter-up-active"
                             />
                           )}
                           <span>{stock.id}</span>
